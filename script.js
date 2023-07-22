@@ -17,12 +17,6 @@ window.onscroll = function () {
   scrollFunction();
 };
 
-function myFunction() {
-  document.getElementById("logo").innerHTML = alert(
-    "Lan ne bakıyon kurabiye var simit var ne bakıyon ..."
-  );
-}
-
 // yıldız efekti verme
 
 const star = [];
