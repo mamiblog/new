@@ -1,3 +1,28 @@
+/*  durum okuma ilerleme çubuğu  */
+
+function guncelle(){
+
+// scroll neredeyse sayfanın yüksekliğine oranla 
+// çubuğumuzun genişliğini ayarlayacak fonksiyonu tanımlıyoruz
+let cubuk = document.getElementById('cubuk'), // id'si cubuk olan elementi alıp cubuk degişkenine atıyoruz
+    elem = document.documentElement,// document uzerinden documentelement objesine daha hızlı ulaşmak için onu da degişkene atıyoruz
+    yukseklik = elem.scrollHeight, // tüm sayfanın yüksekliğini alıp yukseklik değişkenine atıyoruz
+    docBody = document.body, // document üzerinden body elementini değişkene atıyoruz
+	scrollTop = elem['scrollTop'] || docBody['scrollTop'], // element veya body'nin dikey olarak pozisyonu
+	scrollBottom = (elem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight, // tüm sayfanın yüksekliğinden pencerenin yüksekliğini çıkart
+	scrollPercent = scrollTop / scrollBottom * 100 + '%'; // çubuğun genişliğini ayarlayan bölme işlemi
+	
+	
+    cubuk.style.width = scrollPercent // cubuk id'li elemente genişlik yüzdesini ver
+};
+// her scroll eventi olduğunda yukarıda tanımladığımız guncelle fonksiyonunu çağırıyoruz
+window.addEventListener('scroll', guncelle);
+
+
+//----------------------------------------------------------------------------------------------
+
+/*  Hamburger menü  */
+
 const navbar = document.querySelector(".navbar");
 const openmenu = document.querySelector(".openmenu");
 const closemenu = document.querySelector(".closemenu");
