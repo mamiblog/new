@@ -10,12 +10,12 @@
 
 #cubuk {
     position: fixed;
-    top: 0;
+    top: 5px;
     left: 0;
     width: 0%;
     height: 5px;
     z-index: 1000;
-    background: #a2214d;
+    background: #fcfc;
 } 
 
 
